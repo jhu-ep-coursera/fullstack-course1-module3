@@ -48,7 +48,7 @@ The last gem is used for testing HTTP calls without using the live `www.recipepu
   * HTTParty API document is located at `https://github.com/jnunemaker/httparty`
   * recipepuppy interface definition is located at `http://www.recipepuppy.com/about/api/`
 
-4. Implement the Ruby class in a file called 
+4. Implement the Ruby class in a file called `module3_1_assignment.rb`.
 
 5. Run the rspec test(s) to receive feedback.  If you copy/move them,
 be sure to include the important .rspec hidden file. All tests will
@@ -91,11 +91,11 @@ be sure to include the important .rspec hidden file. All tests will
 
 6. Run the `solution.rb` Ruby script to execute a sample call.
 
-```ruby
-require_relative "module3_1_assignment"
+  ```ruby
+  require_relative "module3_1_assignment"
 
-puts Recipe.for("chocolate")
-```
+  puts Recipe.for("chocolate")
+  ```
 
 ### Technical Requirements
 
