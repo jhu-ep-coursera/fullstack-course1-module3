@@ -14,33 +14,34 @@ The functional goal is to implement a restful-flavored API client for `http://ww
 
 ### Getting Started
 
-1. Download and extract the starter set of boostrap files from (URL).
+1. Download and extract the starter set of files. The root directory of the
+   student-start will be referred to as the root directory of your solution.
 
-```shell
-|-- chocolate_recipes.json
-|-- module3_1_assignment.rb
-|-- solution.rb
-|-- .rspec (important hidden file)
-`-- spec
-    |-- recipe_spec.rb
-    `-- spec_helper.rb
-```
+  ```shell
+  --- student-start
+    |-- .rspec (important hidden file)
+    |-- chocolate_recipes.json
+    |-- module3_1_assignment.rb
+    |-- solution.rb
+    `-- spec
+        |-- recipe_spec.rb
+        `-- spec_helper.rb
+  ```
+  * .rspec - configuration file for unit tests. If you move your files you must take 
+  * chocolate_recipes.json - used for off-line unit testing by rspec tests
   * module3_lesson1_assignment.rb - contains the starting example.
   Your solution must be placed within this file.
   * spec - this directory contains tests to verify your solution. You should
   not modify anything in this directory
-  * .rspec - configuration file for unit tests. If you move your files you must take 
-  care to also copy this file.
-  * chocolate_recipes.json - used for off-line unit testing by rspec tests
 
 2. Install the following gems used by the rspec unit tests. You may have some of these already installed.
 The last gem is used for testing HTTP calls without using the live `www.recipepuppy.com` site.
 
-```shell
-$ gem install rspec
-$ gem install rspec-its
-$ gem install webmock
-```
+  ```shell
+  $ gem install rspec
+  $ gem install rspec-its
+  $ gem install webmock
+  ```
 
 3. Read thru the recipepuppy and HTTParty documentation.
 
@@ -53,48 +54,48 @@ $ gem install webmock
 be sure to include the important .rspec hidden file. All tests will
 (obviously) fail until you complete the specified solution.
 
-```shell
-$ rspec
+  ```shell
+  $ rspec
 
-Recipe
-  should respond to #for (FAILED - 1)
-  default_params
-    example at ./spec/recipe_spec.rb:10 (FAILED - 2)
-  base_uri
-    example at ./spec/recipe_spec.rb:11 (FAILED - 3)
-  Chocolate Search
-    example at ./spec/recipe_spec.rb:22 (FAILED - 4)
-    size
-      example at ./spec/recipe_spec.rb:23 (FAILED - 5)
+  Recipe
+    should respond to #for (FAILED - 1)
+    default_params
+      example at ./spec/recipe_spec.rb:10 (FAILED - 2)
+    base_uri
+      example at ./spec/recipe_spec.rb:11 (FAILED - 3)
+    Chocolate Search
+      example at ./spec/recipe_spec.rb:22 (FAILED - 4)
+      size
+        example at ./spec/recipe_spec.rb:23 (FAILED - 5)
 
-Failures:
+  Failures:
 
-  1) Recipe should respond to #for
-  2) Recipe default_params 
-  3) Recipe base_uri 
-  4) Recipe Chocolate Search 
-  5) Recipe Chocolate Search size 
+    1) Recipe should respond to #for
+    2) Recipe default_params 
+    3) Recipe base_uri 
+    4) Recipe Chocolate Search 
+    5) Recipe Chocolate Search size 
 
-Finished in 0.06497 seconds (files took 1.51 seconds to load)
-5 examples, 5 failures
+  Finished in 0.06497 seconds (files took 1.51 seconds to load)
+  5 examples, 5 failures
 
-Failed examples:
+  Failed examples:
 
-rspec ./spec/recipe_spec.rb:9 # Recipe should respond to #for
-rspec ./spec/recipe_spec.rb:10 # Recipe default_params 
-rspec ./spec/recipe_spec.rb:11 # Recipe base_uri 
-rspec ./spec/recipe_spec.rb:22 # Recipe Chocolate Search 
-rspec ./spec/recipe_spec.rb:23 # Recipe Chocolate Search size 
+  rspec ./spec/recipe_spec.rb:9 # Recipe should respond to #for
+  rspec ./spec/recipe_spec.rb:10 # Recipe default_params 
+  rspec ./spec/recipe_spec.rb:11 # Recipe base_uri 
+  rspec ./spec/recipe_spec.rb:22 # Recipe Chocolate Search 
+  rspec ./spec/recipe_spec.rb:23 # Recipe Chocolate Search size 
 
-```
+  ```
 
 6. Run the `solution.rb` Ruby script to execute a sample call.
 
-```ruby
-require_relative "module3_1_assignment"
+  ```ruby
+  require_relative "module3_1_assignment"
 
-puts Recipe.for("chocolate")
-```
+  puts Recipe.for("chocolate")
+  ```
 
 ### Technical Requirements
 
@@ -161,11 +162,12 @@ please complete this to the requirements of the unit test.
 Your final directory contents should look as follows:
 
 ```shell
-|-- module3_1_assignment.rb
-|-- chocolate_recipes.json
-|-- solution.rb
-|-- .rspec (important hidden file)
-`-- spec
-    |-- recipe_spec.rb
-    `-- spec_helper.rb
+  --- student-start
+    |-- .rspec (important hidden file)
+    |-- module3_1_assignment.rb
+    |-- chocolate_recipes.json
+    |-- solution.rb
+    `-- spec
+        |-- recipe_spec.rb
+        `-- spec_helper.rb
 ```
