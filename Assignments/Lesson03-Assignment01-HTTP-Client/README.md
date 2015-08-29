@@ -47,7 +47,7 @@ $ gem install webmock
   * HTTParty API document is located at `https://github.com/jnunemaker/httparty`
   * recipepuppy interface definition is located at `http://www.recipepuppy.com/about/api/`
 
-4. Implement the Ruby class in a file called 
+4. Implement the Ruby class in a file called `module3_1_assignment.rb`.
 
 5. Run the rspec test(s) to receive feedback.  If you copy/move them,
 be sure to include the important .rspec hidden file. All tests will
