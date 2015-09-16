@@ -27,12 +27,12 @@ The functional goal is to implement a restful-flavored API client for `http://ww
           `-- spec_helper.rb
     ```
     
+    * .rspec - configuration file for unit tests. If you move your files you must take 
+      care to also copy this file.
     * module3_lesson1_assignment.rb - contains the starting example.
     Your solution must be placed within this file.
     * spec - this directory contains tests to verify your solution. You should
     not modify anything in this directory
-    * .rspec - configuration file for unit tests. If you move your files you must take 
-    care to also copy this file.
     * chocolate_recipes.json - used for off-line unit testing by rspec tests
 
 2. Install the following gems used by the rspec unit tests. You may have some of these already installed.
