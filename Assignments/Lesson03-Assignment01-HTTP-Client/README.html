@@ -3,47 +3,41 @@
 <p>The functional goal is to implement a restful-flavored API client for <code>http://www.recipepuppy.com/about/api/</code> to return JSON documents containing recipe information.</p>
 <h3 id="functional-requirements">Functional Requirements</h3>
 <ol style="list-style-type: decimal">
-<li>Implement a Ruby class that will</li>
-</ol>
+<li><p>Implement a Ruby class that will</p>
 <ul>
 <li>accept a keyword search term</li>
 <li>forward the keyword search term according to the <code>www.recipepuppy.com</code> interface definition using the HTTParty API</li>
 <li>return the JSON document containing recipe information provided by <code>www.recipepuppy.com</code></li>
-</ul>
+</ul></li>
+</ol>
 <h3 id="getting-started">Getting Started</h3>
 <ol style="list-style-type: decimal">
-<li>Download and extract the starter set of boostrap files from (URL).</li>
-</ol>
-<pre class="shell"><code>|-- chocolate_recipes.json
-|-- module3_1_assignment.rb
-|-- solution.rb
-|-- .rspec (important hidden file)
-`-- spec
-    |-- recipe_spec.rb
-    `-- spec_helper.rb</code></pre>
+<li><p>Download and extract the starter set of boostrap files from (URL).</p>
+<pre class="shell"><code>--- student-start
+  |-- .rspec (important hidden file)
+  |-- chocolate_recipes.json
+  |-- module3_1_assignment.rb
+  |-- solution.rb
+  `-- spec
+      |-- recipe_spec.rb
+      `-- spec_helper.rb</code></pre>
 <ul>
+<li>.rspec - configuration file for unit tests. If you move your files you must take care to also copy this file.</li>
 <li>module3_lesson1_assignment.rb - contains the starting example. Your solution must be placed within this file.</li>
 <li>spec - this directory contains tests to verify your solution. You should not modify anything in this directory</li>
-<li>.rspec - configuration file for unit tests. If you move your files you must take care to also copy this file.</li>
 <li>chocolate_recipes.json - used for off-line unit testing by rspec tests</li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
-<li>Install the following gems used by the rspec unit tests. You may have some of these already installed. The last gem is used for testing HTTP calls without using the live <code>www.recipepuppy.com</code> site.</li>
-</ol>
+</ul></li>
+<li><p>Install the following gems used by the rspec unit tests. You may have some of these already installed. The last gem is used for testing HTTP calls without using the live <code>www.recipepuppy.com</code> site.</p>
 <pre class="shell"><code>$ gem install rspec
 $ gem install rspec-its
-$ gem install webmock</code></pre>
-<ol start="3" style="list-style-type: decimal">
-<li>Read thru the recipepuppy and HTTParty documentation.</li>
-</ol>
+$ gem install webmock</code></pre></li>
+<li><p>Read thru the recipepuppy and HTTParty documentation.</p>
 <ul>
 <li>HTTParty API document is located at <code>https://github.com/jnunemaker/httparty</code></li>
 <li>recipepuppy interface definition is located at <code>http://www.recipepuppy.com/about/api/</code></li>
-</ul>
-<ol start="4" style="list-style-type: decimal">
+</ul></li>
 <li><p>Implement the Ruby class in a file called <code>module3_1_assignment.rb</code>.</p></li>
-<li><p>Run the rspec test(s) to receive feedback. If you copy/move them, be sure to include the important .rspec hidden file. All tests will (obviously) fail until you complete the specified solution.</p></li>
-</ol>
+<li><p>Run the rspec test(s) to receive feedback. If you copy/move them, be sure to include the important .rspec hidden file. All tests will (obviously) fail until you complete the specified solution.</p>
 <pre class="shell"><code>$ rspec
 
 Recipe
@@ -75,18 +69,16 @@ rspec ./spec/recipe_spec.rb:10 # Recipe default_params
 rspec ./spec/recipe_spec.rb:11 # Recipe base_uri 
 rspec ./spec/recipe_spec.rb:22 # Recipe Chocolate Search 
 rspec ./spec/recipe_spec.rb:23 # Recipe Chocolate Search size 
-</code></pre>
-<ol start="6" style="list-style-type: decimal">
-<li>Run the <code>solution.rb</code> Ruby script to execute a sample call.</li>
-</ol>
+</code></pre></li>
+<li><p>Run the <code>solution.rb</code> Ruby script to execute a sample call.</p>
 <pre class="sourceCode ruby"><code class="sourceCode ruby">require_relative <span class="st">&quot;module3_1_assignment&quot;</span>
 
-puts <span class="dt">Recipe</span>.for(<span class="st">&quot;chocolate&quot;</span>)</code></pre>
+puts <span class="dt">Recipe</span>.for(<span class="st">&quot;chocolate&quot;</span>)</code></pre></li>
+</ol>
 <h3 id="technical-requirements">Technical Requirements</h3>
 <ol style="list-style-type: decimal">
 <li><p>Implement a <code>Recipe</code> class that will implement the HTTP API to <code>http://www.recipepuppy.com/about/api/</code>. The unit tests will expect a class by that exact name.</p></li>
-<li><p>The <code>Recipe</code> class should</p></li>
-</ol>
+<li><p>The <code>Recipe</code> class should</p>
 <ul>
 <li>be implemented in a file called <code>module3_1_assignment.rb</code>. The unit tests will expect a file by that name.</li>
 <li>import the HTTParty mixin</li>
@@ -94,16 +86,15 @@ puts <span class="dt">Recipe</span>.for(<span class="st">&quot;chocolate&quot;</
 <li>define a default query param of <code>onlyImages=1</code> for all HTTP GET requests in order to only return results that contain associated thumbnails.</li>
 <li>specify the desired format as <code>json</code></li>
 <li>specify all the above using legal Ruby syntax and</li>
-</ul>
-<ol start="3" style="list-style-type: decimal">
-<li>The <code>Recipe</code> class must have a <code>for</code> class method that</li>
-</ol>
+</ul></li>
+<li><p>The <code>Recipe</code> class must have a <code>for</code> class method that</p>
 <ul>
 <li>accepts a keyword for a search term</li>
 <li>issues an HTTP GET request using the HTTParty gem</li>
 <li>the HTTP GET request must have the &quot;q=keyword&quot; query argument</li>
 <li>returns the JSON payload document supplied in the <code>results</code> element of the hash returned by HTTParty</li>
-</ul>
+</ul></li>
+</ol>
 <h3 id="self-gradingfeedback">Self Grading/Feedback</h3>
 <p>Some unit tests have been provided in the bootstrap files that can be used to evaluate your solution. They must be run from the same directory as your solution.</p>
 <pre class="shell"><code>$ rspec
@@ -136,3 +127,4 @@ Finished in 0.03678 seconds (files took 0.81808 seconds to load)
 `-- spec
     |-- recipe_spec.rb
     `-- spec_helper.rb</code></pre>
+<h4 id="updated-2015-09-19">Updated: 2015-09-19</h4>
