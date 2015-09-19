@@ -1,33 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta name="generator" content="pandoc" />
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; }
-code > span.dt { color: #902000; }
-code > span.dv { color: #40a070; }
-code > span.bn { color: #40a070; }
-code > span.fl { color: #40a070; }
-code > span.ch { color: #4070a0; }
-code > span.st { color: #4070a0; }
-code > span.co { color: #60a0b0; font-style: italic; }
-code > span.ot { color: #007020; }
-code > span.al { color: #ff0000; font-weight: bold; }
-code > span.fu { color: #06287e; }
-code > span.er { color: #ff0000; font-weight: bold; }
-  </style>
-</head>
-<body>
 <h2 id="module-3-assignment-1-recipe-puppy-http-api-interface">Module #3, Assignment 1: Recipe Puppy HTTP API Interface</h2>
 <p>The purpose of this assignment is to implement a source of data -- for use in an MVC Model class implementation.</p>
 <p>The functional goal is to implement a restful-flavored API client for <code>http://www.recipepuppy.com/about/api/</code> to return JSON documents containing recipe information.</p>
@@ -101,9 +71,9 @@ rspec ./spec/recipe_spec.rb:22 # Recipe Chocolate Search
 rspec ./spec/recipe_spec.rb:23 # Recipe Chocolate Search size 
 </code></pre></li>
 <li><p>Run the <code>solution.rb</code> Ruby script to execute a sample call.</p>
-<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby">require_relative <span class="st">&quot;module3_1_assignment&quot;</span>
+<pre class="sourceCode ruby"><code class="sourceCode ruby">require_relative <span class="st">&quot;module3_1_assignment&quot;</span>
 
-puts <span class="dt">Recipe</span>.for(<span class="st">&quot;chocolate&quot;</span>)</code></pre></div></li>
+puts <span class="dt">Recipe</span>.for(<span class="st">&quot;chocolate&quot;</span>)</code></pre></li>
 </ol>
 <h3 id="technical-requirements">Technical Requirements</h3>
 <ol style="list-style-type: decimal">
@@ -143,10 +113,10 @@ Recipe
 Finished in 0.03678 seconds (files took 0.81808 seconds to load)
 5 examples, 0 failures</code></pre>
 <p>A client script (<code>solution.rb</code>) is also provided in the bootstrap and can be used to issue a sample client request.</p>
-<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby">$ ruby solution.rb 
+<pre class="sourceCode ruby"><code class="sourceCode ruby">$ ruby solution.rb 
 {<span class="st">&quot;title&quot;</span>=&gt;<span class="st">&quot;Tim and Tracy&#39;s Chocolate Cake (Boiled)&quot;</span>, <span class="st">&quot;href&quot;</span>=&gt;<span class="st">&quot;http://www.recipezaar.com/Tim-and-Tracys-Chocolate-Cake-Boiled-259680&quot;</span>, <span class="st">&quot;ingredients&quot;</span>=&gt;<span class="st">&quot;baking soda, butter, cocoa powder, eggs, flour, sugar, water&quot;</span>, <span class="st">&quot;thumbnail&quot;</span>=&gt;<span class="st">&quot;http://img.recipepuppy.com/34464.jpg&quot;</span>}
  ...
-{<span class="st">&quot;title&quot;</span>=&gt;<span class="st">&quot;Double Chocolate Cookies &amp;amp; Mint Chocolate Variation&quot;</span>, <span class="st">&quot;href&quot;</span>=&gt;<span class="st">&quot;http://www.recipezaar.com/Double-Chocolate-Cookies-Mint-Chocolate-Variation-275188&quot;</span>, <span class="st">&quot;ingredients&quot;</span>=&gt;<span class="st">&quot;flour, cocoa powder, baking soda, butter, eggs, salt, semisweet chocolate chips, sugar, vanilla extract&quot;</span>, <span class="st">&quot;thumbnail&quot;</span>=&gt;<span class="st">&quot;http://img.recipepuppy.com/363913.jpg&quot;</span>}</code></pre></div>
+{<span class="st">&quot;title&quot;</span>=&gt;<span class="st">&quot;Double Chocolate Cookies &amp;amp; Mint Chocolate Variation&quot;</span>, <span class="st">&quot;href&quot;</span>=&gt;<span class="st">&quot;http://www.recipezaar.com/Double-Chocolate-Cookies-Mint-Chocolate-Variation-275188&quot;</span>, <span class="st">&quot;ingredients&quot;</span>=&gt;<span class="st">&quot;flour, cocoa powder, baking soda, butter, eggs, salt, semisweet chocolate chips, sugar, vanilla extract&quot;</span>, <span class="st">&quot;thumbnail&quot;</span>=&gt;<span class="st">&quot;http://img.recipepuppy.com/363913.jpg&quot;</span>}</code></pre>
 <h3 id="submission">Submission</h3>
 <p>There is no submission required for this assignment but the implementation will be part of a follow-on assignment so please complete this to the requirements of the unit test.</p>
 <p>Your final directory contents should look as follows:</p>
@@ -157,5 +127,4 @@ Finished in 0.03678 seconds (files took 0.81808 seconds to load)
 `-- spec
     |-- recipe_spec.rb
     `-- spec_helper.rb</code></pre>
-</body>
-</html>
+<h4 id="updated-2015-09-19">Updated: 2015-09-19</h4>

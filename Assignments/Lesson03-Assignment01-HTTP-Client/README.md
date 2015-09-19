@@ -171,3 +171,5 @@ Your final directory contents should look as follows:
     |-- recipe_spec.rb
     `-- spec_helper.rb
 ```
+
+#### Updated: 2015-09-19
