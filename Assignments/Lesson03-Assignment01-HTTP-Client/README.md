@@ -16,6 +16,8 @@ The functional goal is to implement a restful-flavored API client for `http://fo
 
 0. Sign up for a Food 2 Fork account at `http://food2fork.com/about/api`. The free plan will give you 500 requests per day. When you sign up, you will need to use an "API Key" available on your "API Admin" page.
 
+    * define an environment variable (FOOD2FORK_KEY) to store your API Key
+
 1. Download and extract the starter set of boostrap files from (URL).
 
     ```shell
@@ -60,110 +62,110 @@ be sure to include the important .rspec hidden file. All tests will
     ```shell
     $ rspec
 
-Recipe
-  should respond to #for (FAILED - 1)
-  Environment variable FOOD2FORK_KEY is set (FAILED - 2)
-  default_params[:key] equals Environment variable FOOD2FORK_KEY (FAILED - 3)
-  default_params
-    example at ./spec/recipe_spec.rb:18 (FAILED - 4)
-  base_uri
-    example at ./spec/recipe_spec.rb:26 (FAILED - 5)
-  Chocolate Search
-    example at ./spec/recipe_spec.rb:39 (FAILED - 6)
-    size
-      example at ./spec/recipe_spec.rb:42 (FAILED - 7)
-    sample
-      example at ./spec/recipe_spec.rb:45 (FAILED - 8)
-    sample
-      example at ./spec/recipe_spec.rb:46 (FAILED - 9)
-    sample
-      example at ./spec/recipe_spec.rb:47 (FAILED - 10)
-    sample
-      example at ./spec/recipe_spec.rb:48 (FAILED - 11)
+    Recipe
+      should respond to #for (FAILED - 1)
+      Environment variable FOOD2FORK_KEY is set (FAILED - 2)
+      default_params[:key] equals Environment variable FOOD2FORK_KEY (FAILED - 3)
+      default_params
+        example at ./spec/recipe_spec.rb:18 (FAILED - 4)
+      base_uri
+        example at ./spec/recipe_spec.rb:26 (FAILED - 5)
+      Chocolate Search
+        example at ./spec/recipe_spec.rb:39 (FAILED - 6)
+        size
+          example at ./spec/recipe_spec.rb:42 (FAILED - 7)
+        sample
+          example at ./spec/recipe_spec.rb:45 (FAILED - 8)
+        sample
+          example at ./spec/recipe_spec.rb:46 (FAILED - 9)
+        sample
+          example at ./spec/recipe_spec.rb:47 (FAILED - 10)
+        sample
+          example at ./spec/recipe_spec.rb:48 (FAILED - 11)
 
-Failures:
+    Failures:
 
-  1) Recipe should respond to #for
-     Failure/Error: it { is_expected.to respond_to(:for) }
-       expected Recipe to respond to :for
-     # ./spec/recipe_spec.rb:11:in `block (2 levels) in <top (required)>'
+      1) Recipe should respond to #for
+         Failure/Error: it { is_expected.to respond_to(:for) }
+           expected Recipe to respond to :for
+         # ./spec/recipe_spec.rb:11:in `block (2 levels) in <top (required)>'
 
-  2) Recipe Environment variable FOOD2FORK_KEY is set
-     Failure/Error: expect(ENV["FOOD2FORK_KEY"]).to_not be_nil
-       expected: not nil
-            got: nil
-     # ./spec/recipe_spec.rb:14:in `block (2 levels) in <top (required)>'
+      2) Recipe Environment variable FOOD2FORK_KEY is set
+         Failure/Error: expect(ENV["FOOD2FORK_KEY"]).to_not be_nil
+           expected: not nil
+                got: nil
+         # ./spec/recipe_spec.rb:14:in `block (2 levels) in <top (required)>'
 
-  3) Recipe default_params[:key] equals Environment variable FOOD2FORK_KEY
-     Failure/Error: expect(subject.default_params[:key]).to eq ENV["FOOD2FORK_KEY"]
-     NoMethodError:
-       undefined method `default_params' for Recipe:Class
-     # ./spec/recipe_spec.rb:22:in `block (2 levels) in <top (required)>'
+      3) Recipe default_params[:key] equals Environment variable FOOD2FORK_KEY
+         Failure/Error: expect(subject.default_params[:key]).to eq ENV["FOOD2FORK_KEY"]
+         NoMethodError:
+           undefined method `default_params' for Recipe:Class
+         # ./spec/recipe_spec.rb:22:in `block (2 levels) in <top (required)>'
 
-  4) Recipe default_params
-     Failure/Error: its(:default_params) { is_expected.to include :key }
-     NoMethodError:
-       undefined method `default_params' for Recipe:Class
-     # ./spec/recipe_spec.rb:18:in `block (2 levels) in <top (required)>'
+      4) Recipe default_params
+         Failure/Error: its(:default_params) { is_expected.to include :key }
+         NoMethodError:
+           undefined method `default_params' for Recipe:Class
+         # ./spec/recipe_spec.rb:18:in `block (2 levels) in <top (required)>'
 
-  5) Recipe base_uri
-     Failure/Error: its(:base_uri) { is_expected.to include "http://food2fork.com/api" }
-     NoMethodError:
-       undefined method `base_uri' for Recipe:Class
-     # ./spec/recipe_spec.rb:26:in `block (2 levels) in <top (required)>'
+      5) Recipe base_uri
+         Failure/Error: its(:base_uri) { is_expected.to include "http://food2fork.com/api" }
+         NoMethodError:
+           undefined method `base_uri' for Recipe:Class
+         # ./spec/recipe_spec.rb:26:in `block (2 levels) in <top (required)>'
 
-  6) Recipe Chocolate Search
-     Failure/Error: query = Recipe.default_params.merge({"q" => "chocolate"})
-     NoMethodError:
-       undefined method `default_params' for Recipe:Class
-     # ./spec/recipe_spec.rb:31:in `block (3 levels) in <top (required)>'
+      6) Recipe Chocolate Search
+         Failure/Error: query = Recipe.default_params.merge({"q" => "chocolate"})
+         NoMethodError:
+           undefined method `default_params' for Recipe:Class
+         # ./spec/recipe_spec.rb:31:in `block (3 levels) in <top (required)>'
 
-  7) Recipe Chocolate Search size
-     Failure/Error: query = Recipe.default_params.merge({"q" => "chocolate"})
-     NoMethodError:
-       undefined method `default_params' for Recipe:Class
-     # ./spec/recipe_spec.rb:31:in `block (3 levels) in <top (required)>'
+      7) Recipe Chocolate Search size
+         Failure/Error: query = Recipe.default_params.merge({"q" => "chocolate"})
+         NoMethodError:
+           undefined method `default_params' for Recipe:Class
+         # ./spec/recipe_spec.rb:31:in `block (3 levels) in <top (required)>'
 
-  8) Recipe Chocolate Search sample
-     Failure/Error: query = Recipe.default_params.merge({"q" => "chocolate"})
-     NoMethodError:
-       undefined method `default_params' for Recipe:Class
-     # ./spec/recipe_spec.rb:31:in `block (3 levels) in <top (required)>'
+      8) Recipe Chocolate Search sample
+         Failure/Error: query = Recipe.default_params.merge({"q" => "chocolate"})
+         NoMethodError:
+           undefined method `default_params' for Recipe:Class
+         # ./spec/recipe_spec.rb:31:in `block (3 levels) in <top (required)>'
 
-  9) Recipe Chocolate Search sample
-     Failure/Error: query = Recipe.default_params.merge({"q" => "chocolate"})
-     NoMethodError:
-       undefined method `default_params' for Recipe:Class
-     # ./spec/recipe_spec.rb:31:in `block (3 levels) in <top (required)>'
+      9) Recipe Chocolate Search sample
+         Failure/Error: query = Recipe.default_params.merge({"q" => "chocolate"})
+         NoMethodError:
+           undefined method `default_params' for Recipe:Class
+         # ./spec/recipe_spec.rb:31:in `block (3 levels) in <top (required)>'
 
-  10) Recipe Chocolate Search sample
-      Failure/Error: query = Recipe.default_params.merge({"q" => "chocolate"})
-      NoMethodError:
-        undefined method `default_params' for Recipe:Class
-      # ./spec/recipe_spec.rb:31:in `block (3 levels) in <top (required)>'
+      10) Recipe Chocolate Search sample
+          Failure/Error: query = Recipe.default_params.merge({"q" => "chocolate"})
+          NoMethodError:
+            undefined method `default_params' for Recipe:Class
+          # ./spec/recipe_spec.rb:31:in `block (3 levels) in <top (required)>'
 
-  11) Recipe Chocolate Search sample
-      Failure/Error: query = Recipe.default_params.merge({"q" => "chocolate"})
-      NoMethodError:
-        undefined method `default_params' for Recipe:Class
-      # ./spec/recipe_spec.rb:31:in `block (3 levels) in <top (required)>'
+      11) Recipe Chocolate Search sample
+          Failure/Error: query = Recipe.default_params.merge({"q" => "chocolate"})
+          NoMethodError:
+            undefined method `default_params' for Recipe:Class
+          # ./spec/recipe_spec.rb:31:in `block (3 levels) in <top (required)>'
 
-Finished in 0.01817 seconds (files took 0.39671 seconds to load)
-11 examples, 11 failures
+    Finished in 0.01817 seconds (files took 0.39671 seconds to load)
+    11 examples, 11 failures
 
-Failed examples:
+    Failed examples:
 
-rspec ./spec/recipe_spec.rb:11 # Recipe should respond to #for
-rspec ./spec/recipe_spec.rb:13 # Recipe Environment variable FOOD2FORK_KEY is set
-rspec ./spec/recipe_spec.rb:21 # Recipe default_params[:key] equals Environment variable FOOD2FORK_KEY
-rspec ./spec/recipe_spec.rb:18 # Recipe default_params
-rspec ./spec/recipe_spec.rb:26 # Recipe base_uri
-rspec ./spec/recipe_spec.rb:39 # Recipe Chocolate Search
-rspec ./spec/recipe_spec.rb:42 # Recipe Chocolate Search size
-rspec ./spec/recipe_spec.rb:45 # Recipe Chocolate Search sample
-rspec ./spec/recipe_spec.rb:46 # Recipe Chocolate Search sample
-rspec ./spec/recipe_spec.rb:47 # Recipe Chocolate Search sample
-rspec ./spec/recipe_spec.rb:48 # Recipe Chocolate Search sample
+    rspec ./spec/recipe_spec.rb:11 # Recipe should respond to #for
+    rspec ./spec/recipe_spec.rb:13 # Recipe Environment variable FOOD2FORK_KEY is set
+    rspec ./spec/recipe_spec.rb:21 # Recipe default_params[:key] equals Environment variable FOOD2FORK_KEY
+    rspec ./spec/recipe_spec.rb:18 # Recipe default_params
+    rspec ./spec/recipe_spec.rb:26 # Recipe base_uri
+    rspec ./spec/recipe_spec.rb:39 # Recipe Chocolate Search
+    rspec ./spec/recipe_spec.rb:42 # Recipe Chocolate Search size
+    rspec ./spec/recipe_spec.rb:45 # Recipe Chocolate Search sample
+    rspec ./spec/recipe_spec.rb:46 # Recipe Chocolate Search sample
+    rspec ./spec/recipe_spec.rb:47 # Recipe Chocolate Search sample
+    rspec ./spec/recipe_spec.rb:48 # Recipe Chocolate Search sample
     ```
 
 6. Run the `solution.rb` Ruby script to execute a sample call.
@@ -176,21 +178,22 @@ rspec ./spec/recipe_spec.rb:48 # Recipe Chocolate Search sample
 
 ### Technical Requirements
 
-1. Implement a `Recipe` class that will implement the HTTP API to `http://food2fork.com/about/api`.
+1. Define an environment variable called FOOD2FORK_KEY that stores the value of your API Key from the `food2fork.com` admin page when you signed up for an account.
+
+2. Implement a `Recipe` class that will implement the HTTP API to `http://food2fork.com/about/api`.
 The unit tests will expect a class by that exact name.
 
-2. The `Recipe` class should
+3. The `Recipe` class should
 
     * be implemented in a file called `module3_1_assignment.rb`. The unit tests will expect a file by that name.
     * import the HTTParty mixin
     * define a base_uri to use `http://food2fork.com/api`
-    * define an environmental variable called FOOD2FORK_KEY
     * define a default query param of `key` for all HTTP GET
-    requests whose value is equal to the environment variable FOOD2FORK_KEY.
+    requests whose value is equal to value of the environment variable FOOD2FORK_KEY.
     * specify the desired format as `json`
     * specify all the above using legal Ruby syntax
 
-3. The `Recipe` class must have a `for` class method that 
+4. The `Recipe` class must have a `for` class method that 
 
     * accepts a keyword for a search term
     * issues an HTTP GET request using the HTTParty gem
@@ -227,16 +230,26 @@ Recipe
     sample
       should have key "image_url"
 
-Finished in 0.02369 seconds (files took 0.40009 seconds to load)```
+Finished in 0.02369 seconds (files took 0.40009 seconds to load)
+```
 
 A client script (`solution.rb`) is also provided in the bootstrap
 and can be used to issue a sample client request.
 
+
 ```ruby
 $ ruby solution.rb 
-{"title"=>"Tim and Tracy's Chocolate Cake (Boiled)", "href"=>"http://www.recipezaar.com/Tim-and-Tracys-Chocolate-Cake-Boiled-259680", "ingredients"=>"baking soda, butter, cocoa powder, eggs, flour, sugar, water", "thumbnail"=>"http://img.recipepuppy.com/34464.jpg"}
- ...
-{"title"=>"Double Chocolate Cookies &amp; Mint Chocolate Variation", "href"=>"http://www.recipezaar.com/Double-Chocolate-Cookies-Mint-Chocolate-Variation-275188", "ingredients"=>"flour, cocoa powder, baking soda, butter, eggs, salt, semisweet chocolate chips, sugar, vanilla extract", "thumbnail"=>"http://img.recipepuppy.com/363913.jpg"}
+{"publisher"=>"BBC Good Food", "f2f_url"=>"http://food2fork.com/view/9089e3", 
+"title"=>"Cookie Monster cupcakes",
+"source_url"=>"http://www.bbcgoodfood.com/recipes/873655/cookie-monster-cupcakes", 
+"recipe_id"=>"9089e3", "image_url"=>"http://static.food2fork.com/604133_mediumd392.jpg",
+"social_rank"=>100.0, "publisher_url"=>"http://www.bbcgoodfood.com"}
+...
+{"publisher"=>"Elana's Pantry", "f2f_url"=>"http://food2fork.com/view/22d607", 
+"title"=>"Brownies", 
+"source_url"=>"http://www.elanaspantry.com/brownies/", 
+"recipe_id"=>"22d607", "image_url"=>"http://static.food2fork.com/dsc_8204brownies7a41.jpg", 
+"social_rank"=>99.99999999990415, "publisher_url"=>"http://www.elanaspantry.com"}
 ```
 
 ### Submission
@@ -257,4 +270,4 @@ Your final directory contents should look as follows:
     `-- spec_helper.rb
 ```
 
-#### Updated: 2015-09-21
+#### Updated: 2015-09-22
