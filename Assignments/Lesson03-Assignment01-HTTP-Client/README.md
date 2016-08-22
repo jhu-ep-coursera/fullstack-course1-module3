@@ -46,6 +46,7 @@ The last gem is used for testing HTTP calls without using the live `http://food2
     $ gem install rspec
     $ gem install rspec-its
     $ gem install webmock
+    $ gem install httparty
     ```
 
 3. Read thru the Food2Fork and HTTParty documentation.
